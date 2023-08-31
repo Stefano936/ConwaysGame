@@ -5,12 +5,13 @@ namespace ConwaysGame
 {
     class Program {
         static void Main(string[] args) {
-            Importador importador = new Importador(TableroPath);
-                Tablero tablero = new Tablero(importador.LoadTablero());
+            string tableroPath = "../../assets/board.txt";
+            Importador importador = new Importador(tableroPath);
+            Tablero tablero = new Tablero(importador.LoadTablero());
                 
-                int lines = importador.GetFileLines();
-                Imprimir imprimir = new Imprimir(tablero, lines, lines);
-                imprimir.Printer();
+            int lines = importador.GetFileLines();
+            Imprimir imprimir = new Imprimir(tablero, lines, lines);
+            imprimir.Print();
         }
     }
 }
