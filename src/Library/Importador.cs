@@ -1,4 +1,6 @@
-﻿namespace ConwaysGame;
+﻿using System.IO;
+
+namespace ConwaysGame;
 
 public class Importador {
     private string Url;
